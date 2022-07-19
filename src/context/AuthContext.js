@@ -11,8 +11,7 @@ export const authReducer = (state, action) => {
             return { ...state, user: action.payload}
         case 'LOGOUT':
             return { ...state, user: null}
-        case 'LOGIN':
-            return { ...state, user: action.payload}
+        
         default:
             return state
     }
@@ -34,7 +33,7 @@ useEffect(() => {
 
 }, [])
 
-    console.log('AuthContext state:', state)
+    
 
     return (
         <AuthContext.Provider value = {{ ...state, dispatch }}>

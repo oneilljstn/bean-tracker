@@ -27,7 +27,7 @@ export default function Navbar() {
               <>
               <li>Hello, {user.displayName}</li>
             <li>
-              <button className='btn' onClick={logout}>Logout</button>
+              <button className={styles.btn} onClick={logout}>Logout</button>
             </li>
             </>
             )}
