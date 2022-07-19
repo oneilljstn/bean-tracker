@@ -9,7 +9,19 @@
     
   }
  
-
+.search {
+  margin-top: 20px;
+  display: flex;
+}
+.search input {
+  padding: 5px;
+  color: #90A4AE;
+  width: 300px;
+  margin : auto;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #37474F ;
+}
   /** Bean Form */
 
   .formBtn {
@@ -179,7 +191,7 @@
   color: #D1C4E9;
   cursor: pointer;
   margin-left: auto;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   font-family: 'Roboto', 'sans-serif';
   
 }
