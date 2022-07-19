@@ -17,13 +17,17 @@ export default function BeanList({ beans }) {
         {beans.map((bean) => (
           <div key={bean.id} className={styles.beanCard}>
             <img className={styles.beanCardImg} src={bean.image ? bean.image : placeholder} alt={bean.name}></img>
-            <div className={styles.beanDetails}>
-              <h1 className={styles.beanCardTitle}> {bean.name}</h1>
-              <p className={styles.beanCardSubTitle}>Grinder</p>
-              <p className={styles.beanCardContent}>Setting: {bean.grinderSetting}</p>
-              <p className={styles.beanCardContent}>Duration: {bean.grinderDuration} sec</p>
-            </div>
-            <button onClick={() => handleDelete(bean.id)}>x</button>
+            
+              <p className={styles.beanCardTitle}> {bean.name}</p>
+              <div className={styles.beanDetails}>
+              {/**<p className={styles.beanCardSubTitle}>&#9881;</p>*/}
+              <p className={styles.beanCardContent}>&#9201; {bean.grinderDuration} sec</p>
+              
+              <p className={styles.beanCardContent}> @ setting {bean.grinderSetting}</p>
+              </div>
+              <p className={styles.beanCardNotes}>{bean.notes} </p>
+            
+            <button onClick={() => handleDelete(bean.id)}>DELETE</button>
           </div>
         ))}
       </div>

@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,400&family=Roboto:wght@100;400&display=swap');
 .container {
     
     max-width: 960px;
-    margin: 60px auto;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    
   }
-  .content {
-    padding-right: 30px;
-  }
+ 
 
   /** Bean Form */
 
@@ -17,103 +20,171 @@
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
+  color: rgb(0, 0, 0); /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
+  padding: 9px; /* Some padding */
   border-radius: 15px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  font-size: 28px; /* Increase font size */
   box-shadow: 0,0,0,0,0.2;
   height: 50px;
   width: 50px;
+  background-color: #B388FF;
   
   }
-
   .formBtn:hover {
-    background-color: #555; /* Add a dark-grey background on hover */
+    background: #B39DDB;
+    transition: 0.1s;
   }
+
 
 
   .overlay {
     position: fixed;
-    bottom: 60px; /* Place the button at the bottom of the page */
-    right: 70px; /* Place the button 30px from the right */
+    bottom: 75px; /* Place the button at the bottom of the page */
     z-index: 98;
-    width: 300px;
+    width: 350px;
     margin: auto;
-    background: rgb(39, 0, 106);
-    color: white;
-    border-radius: 20px;
+    background-color: #37474F;
+    font-size: 0.9rem;
+    border-radius: 2px;
     transition: 0.3s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    
     }
   .overlayHidden {
-    display: none;
-
+    position: absolute;
+    bottom: -100px;
+    transition: 0.3s;
+    transform: translateY(100%);
+    visibility: hidden;
+    height: 0px;
+    overflow: hidden;
   }
   .overlay form {
     margin: 20px;
+    color: #B0BEC5;
+  }
+  .overlay label {
+
+
+      top: 15px;
+      left: 15px;
+      padding: 0 4px;
+      
+      
+      opacity: 0.8;
+      font-size: 16px;
+      transition: 0.5s;
+      
+    
   }
   .overlay input,
   .overlay select {
+    color: #B0BEC5;
+    background-color: #37474F;
+    border-style: none;
     display: block;
     width: 100%;
     padding: 10px;
-    margin-top: 8px;
-    box-sizing: border-box;
-    border: 0;
+    border: 0.5px solid #ECEFF1;
     border-radius: 4px;
-    color: #555;
+    margin-bottom: 8px;
+    box-sizing: border-box;
     font-size: 1em;
   } 
+  .overlay input:focus {
+    border: 0.5px solid #ECEFF1;
+    border-radius: 4px;
+  }
+ 
   .overlay button {
-    color: #fff;
-    border: 2px solid #fff;
-    margin-top: 10px;
+    color: #000000;
+    background: #B388FF;
+    border: none;
+    margin-left: auto;
+    margin-top: 15px;
     padding: 6px 12px;
-    background-color: transparent;
     font-size: 1em;
     border-radius: 4px;
     cursor: pointer;
     display: block;
-    width: 100%;
+    width: 25%;
+  }
+  .overlay button:hover {
+    background: #B39DDB;
+    transition: 0.1s;
   }
 /* Bean list */
 
 .beanCard {
+  border-radius: 5px;
   transition: 0.3s;
-  margin: auto;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
+  /* font-family: 'Roboto', sans-serif; */
+  margin: 0 0 20px auto;
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);*/
+  color: #FFFFFF;
+  width: 350px;
+  text-align: left;
+  background-color: #37474F;
 
  
 }
 
 .beanCardImg {
-  width: 100%;
+  border-radius: 2px 2px 0 0;
+    max-height: 300px; /* play around with this number until you get the height you need */
+    width: 100%;
+    overflow: hidden;
+  background-size: cover;
+  background-position: center center;
 
 }
 
 .beanDetails {
- padding: 10px;
+ padding: 0 10px;
+ display: flex;
+ align-items: flex-start;
+
+  color: #90A4AE;
+  font-size: 0.9rem;
 }
 .beanCardTitle {
-  
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  align-items: flex-start;
+
 
 }
 
 .beanCardSubTitle {
-  color: grey;
-  font-size: 18px;
+  padding-right: 5px;
+  font-size: 1rem;
 }
 .beanCardContent {
-  
+  padding: 0 5px 5px 0;
 }
 
+.beanCardNotes {
+  padding: 15px 10px;
+  
+  font-size: 0.8rem;
+}
 
 .beanCard button {
+  background-color:rgba(0, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  color: #D1C4E9;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 20px;
+  font-family: 'Roboto', 'sans-serif';
+  
+}
+/*
+.beanCard-old button {
   border: none;
   cursor: pointer;
   display: flex;
@@ -123,8 +194,9 @@
   opacity: 0.7;
   font-size: 1em;
 }
+*/
 .beanCard button:hover, a:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .beanList li {

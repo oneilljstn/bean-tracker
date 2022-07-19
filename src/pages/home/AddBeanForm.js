@@ -10,6 +10,7 @@ export default function AddBeanForm({ uid }) {
   const [name, setName] = useState("");
   const [grinderSetting, setGrinderSetting] = useState("");
   const [duration, setDuration] = useState("");
+  const [beanNotes, setBeanNotes] = useState("")
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
   const [progress, setProgress] = useState(0);
@@ -32,6 +33,7 @@ export default function AddBeanForm({ uid }) {
 
   const uploadImage = () => {
     setIsPending(true);
+    // Check to see if user actually added a file
     if (!file) {
       alert("Please upload an image first!");
       setIsPending(false);
@@ -66,6 +68,7 @@ export default function AddBeanForm({ uid }) {
             grinderSetting: grinderSetting,
             image: imgURL,
             userId: uid,
+            notes: beanNotes,
           };
           //console.log(doc)
           addDocument(doc);
@@ -110,14 +113,23 @@ export default function AddBeanForm({ uid }) {
           onChange={(e) => setDuration(e.target.value)}
           value={duration}
         ></input>
+        <label htmlFor="bean-notes">Notes:</label>
+        <input
+          id="bean-notes"
+          type="text"
+          required
+          onChange={(e) => setBeanNotes(e.target.value)}
+          value={beanNotes}
+        ></input>
+         <label htmlFor="bean-image">Photo:</label>
         <input
           onChange={handleFileChange}
           accept="image/*"
-          id="icon-button-file"
+          id="bean-image"
           type="file"
           capture="environment"
         />
-        <button>Save</button>
+        <button>SUBMIT</button>
       </form>
       </div>
       <button className={styles.formBtn} title="Open Form" onClick={() => setShowForm(!showForm)}>{showForm ? '-' : '+' }</button>

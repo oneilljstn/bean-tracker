@@ -1,10 +1,10 @@
 /* navbar styles */
 .navbar {
     width: 100%;
-    background: #170951;
+    background: #311B92;
     padding: 20px 10px;
     box-sizing: border-box;
-    color: rgb(198, 198, 198)
+    color: #CFD8DC;
   }
   .navbar ul {
     display: flex;
@@ -14,7 +14,6 @@
   }
   .title {
     margin-right: auto;
-    font-weight: bold;
     letter-spacing: 1px;
     font-size: 1.2em;
   }
@@ -29,16 +28,14 @@
     list-style-type: none;
   }
   .btn {
-    background: none;
-    border: 2px solid #ffc60b;
+    background-color: #B388FF;
+    border: none;
     padding: 6px 12px;
     border-radius: 4px;
-    color: #ffc60b;
-    font-weight: bold;
+    color: #000000;
     cursor: pointer;
     font-size: 1em;
   }
   .btn:hover {
-    background: #ffc60b;
-    color: #fff;
+    background: #B39DDB;
   }
