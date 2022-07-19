@@ -5,7 +5,7 @@ service cloud.firestore {
       // any logged in user can create new documents
       allow create: if request.auth != null;
       // logged in users can read and delete their own documents
-      allow read, delete: if request.auth.uid == resource.data.uid;
+      allow read, delete: if request.auth.uid == resource.data.userId;
           
     }
   }

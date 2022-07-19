@@ -35,6 +35,7 @@ export default function BeanList({ beans, query }) {
 
             <p className={styles.beanCardTitle}> {bean.name}</p>
             <div className={styles.beanDetails}>
+
               <p className={styles.beanCardContent}>
                 &#9201; {bean.grinderDuration} seconds @ setting {bean.grinderSetting}
               </p>
