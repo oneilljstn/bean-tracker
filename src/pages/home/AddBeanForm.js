@@ -80,7 +80,7 @@ export default function AddBeanForm({ uid }) {
   };
 
   return (
-    <div>
+  <>
    
    <div className={showForm ? styles.overlay : styles.overlayHidden}>
       
@@ -135,6 +135,6 @@ export default function AddBeanForm({ uid }) {
       <button className={styles.formBtn} title="Open Form" onClick={() => setShowForm(!showForm)}>{showForm ? '-' : '+' }</button>
 
      
-    </div>
+    </>
   );
 }

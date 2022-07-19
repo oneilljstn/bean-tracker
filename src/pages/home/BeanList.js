@@ -19,6 +19,7 @@ export default function BeanList({ beans, query }) {
     if (query !== '') {
       return bean.name.toLowerCase().match(query.toLowerCase());
     } 
+    return false;
   });
 
   return (
@@ -34,17 +35,11 @@ export default function BeanList({ beans, query }) {
 
             <p className={styles.beanCardTitle}> {bean.name}</p>
             <div className={styles.beanDetails}>
-              {/**<p className={styles.beanCardSubTitle}>&#9881;</p>*/}
               <p className={styles.beanCardContent}>
-                &#9201; {bean.grinderDuration} sec
-              </p>
-
-              <p className={styles.beanCardContent}>
-                {" "}
-                @ setting {bean.grinderSetting}
+                &#9201; {bean.grinderDuration} seconds @ setting {bean.grinderSetting}
               </p>
             </div>
-            <p className={styles.beanCardNotes}>{bean.notes} </p>
+            <p className={styles.beanCardNotes}>{bean.notes && bean.notes.substring(0,200)} </p>
 
             <button onClick={() => handleDelete(bean.id)}>DELETE</button>
           </div>

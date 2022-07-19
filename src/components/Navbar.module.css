@@ -12,6 +12,7 @@
     max-width: 960px;
     align-items: center;
   }
+
   .title {
     margin-right: auto;
     letter-spacing: 1px;
@@ -21,7 +22,7 @@
     margin-left: 16px;
   }
   .navbar a {
-    color: #333;
+    color: #CFD8DC;
     text-decoration: none;
   }
   ul {
@@ -38,4 +39,5 @@
   }
   .btn:hover {
     background: #B39DDB;
+
   }
