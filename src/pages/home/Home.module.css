@@ -1,31 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,400&family=Roboto:wght@100;400&display=swap');
+/* div containing the bean list and new bean form*/
 .container {
-    
-    max-width: 960px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    
-  }
- 
+  max-width: 960px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+/* Search/filter box */
 .search {
   margin-top: 20px;
   display: flex;
 }
 .search input {
   padding: 5px;
-  color: #90A4AE;
+  color: #90a4ae;
   width: 300px;
-  margin : auto;
+  margin: auto;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #37474F ;
+  border-bottom: 2px solid #37474f;
 }
-  /** Bean Form */
 
-  .formBtn {
-
+/** Bean Form */
+.formBtn {
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
@@ -37,139 +34,120 @@
   padding: 9px; /* Some padding */
   border-radius: 15px; /* Rounded corners */
   font-size: 28px; /* Increase font size */
-  box-shadow: 0,0,0,0,0.2;
+  box-shadow: 0, 0, 0, 0, 0.2;
   height: 50px;
   width: 50px;
-  background-color: #B388FF;
-  
-  }
-  .formBtn:hover {
-    background: #B39DDB;
-    transition: 0.1s;
-  }
+  background-color: #b388ff;
+}
+.formBtn:hover {
+  background: #b39ddb;
+  transition: 0.1s;
+}
+/* bean form when hidden*/
+.overlayHidden {
+  position: absolute;
+  bottom: -100px;
+  transition: 0.3s;
+  transform: translateY(100%);
+  visibility: hidden;
+  height: 0px;
+  overflow: hidden;
+}
+/* Bean form when shown */
+.overlay {
+  position: fixed;
+  bottom: 75px; /* Place the button at the bottom of the page */
+  z-index: 98;
+  width: 350px;
+  margin: auto;
+  background-color: #37474f;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  transition: 0.3s;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+.overlay form {
+  margin: 20px;
+  color: #b0bec5;
+}
+.overlay label {
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  opacity: 0.8;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.overlay input,
+.overlay select {
+  color: #b0bec5;
+  background-color: #37474f;
+  border-style: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 0.5px solid #eceff1;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+.overlay input:focus {
+  border: 0.5px solid #eceff1;
+  border-radius: 4px;
+}
+.overlay button {
+  color: #000000;
+  background: #b388ff;
+  border: none;
+  margin-left: auto;
+  margin-top: 15px;
+  padding: 6px 12px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 25%;
+}
+.overlay button:hover {
+  background: #b39ddb;
+  transition: 0.1s;
+}
 
-  
-
-  .overlay {
-    position: fixed;
-    bottom: 75px; /* Place the button at the bottom of the page */
-    z-index: 98;
-    width: 350px;
-    margin: auto;
-    background-color: #37474F;
-    font-size: 0.9rem;
-    border-radius: 2px;
-    transition: 0.3s;
-    overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
-    opacity: 1;
-    
-    }
-  .overlayHidden {
-    position: absolute;
-    bottom: -100px;
-    transition: 0.3s;
-    transform: translateY(100%);
-    visibility: hidden;
-    height: 0px;
-    overflow: hidden;
-  }
-  .overlay form {
-    margin: 20px;
-    color: #B0BEC5;
-  }
-  .overlay label {
-
-
-      top: 15px;
-      left: 15px;
-      padding: 0 4px;
-      
-      
-      opacity: 0.8;
-      font-size: 16px;
-      transition: 0.5s;
-      
-    
-  }
-  .overlay input,
-  .overlay select {
-    color: #B0BEC5;
-    background-color: #37474F;
-    border-style: none;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 0.5px solid #ECEFF1;
-    border-radius: 4px;
-    margin-bottom: 8px;
-    box-sizing: border-box;
-    font-size: 1em;
-  } 
-  .overlay input:focus {
-    border: 0.5px solid #ECEFF1;
-    border-radius: 4px;
-  }
- 
-  .overlay button {
-    color: #000000;
-    background: #B388FF;
-    border: none;
-    margin-left: auto;
-    margin-top: 15px;
-    padding: 6px 12px;
-    font-size: 1em;
-    border-radius: 4px;
-    cursor: pointer;
-    display: block;
-    width: 25%;
-  }
-  .overlay button:hover {
-    background: #B39DDB;
-    transition: 0.1s;
-  }
 /* Bean list */
-
 .beanCard {
   border-radius: 5px;
   transition: 0.3s;
   /* font-family: 'Roboto', sans-serif; */
   margin: 0 0 20px auto;
-   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);*/
-  color: #FFFFFF;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);*/
+  color: #ffffff;
   width: 350px;
   text-align: left;
-  background-color: #37474F;
-
- 
+  background-color: #37474f;
 }
-
 .beanCardImg {
   border-radius: 2px 2px 0 0;
-    max-height: 300px; /* play around with this number until you get the height you need */
-    width: 100%;
-    overflow: hidden;
+  max-height: 300px; /* play around with this number until you get the height you need */
+  width: 100%;
+  overflow: hidden;
   background-size: cover;
   background-position: center center;
-
 }
-
 .beanDetails {
- padding: 0 10px;
- display: flex;
- align-items: flex-start;
-
-  color: #90A4AE;
+  padding: 0 10px;
+  display: flex;
+  align-items: flex-start;
+  color: #90a4ae;
   font-size: 0.9rem;
 }
 .beanCardTitle {
   padding: 5px 10px;
   font-size: 1.5rem;
   align-items: flex-start;
-
-
 }
-
 .beanCardSubTitle {
   padding-right: 5px;
   font-size: 1rem;
@@ -177,55 +155,35 @@
 .beanCardContent {
   padding: 0 5px 5px 0;
 }
-
 .beanCardNotes {
   padding: 15px 10px;
-  
   font-size: 0.8rem;
 }
-
 .beanCard button {
-  background-color:rgba(0, 255, 255, 0);
+  background-color: rgba(0, 255, 255, 0);
   border: none;
   cursor: pointer;
   display: flex;
-  color: #D1C4E9;
+  color: #d1c4e9;
   cursor: pointer;
   margin-left: auto;
   padding: 0 20px 20px 20px;
-  font-family: 'Roboto', 'sans-serif';
-  
+  font-family: "Roboto", "sans-serif";
 }
-/*
-.beanCard-old button {
-  border: none;
-  cursor: pointer;
-  display: flex;
-  background-color: rgb(253, 143, 143);
-  cursor: pointer;
-  margin-left: auto;
-  opacity: 0.7;
-  font-size: 1em;
-}
-*/
-.beanCard button:hover, a:hover {
+.beanCard button:hover,
+a:hover {
   opacity: 0.7;
 }
-
 .beanList li {
-    margin: 30px auto;
-    border: 1px solid #f2f2f2;
-    box-shadow: 3px 3px 5px rgba(50,50,50,0.1);
-    padding: 20px;
-    
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    position: relative;
-    overflow: hidden;
-    border: 4px solid #170951;
-    border-radius: 10pt;
-  }
-
- 
-  
+  margin: 30px auto;
+  border: 1px solid #f2f2f2;
+  box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.1);
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid #170951;
+  border-radius: 10pt;
+}

@@ -1,7 +1,7 @@
-import firebase from 'firebase/app'
-import 'firebase/firestore'
-import 'firebase/auth'
-import 'firebase/storage';
+import firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+import "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAoq7BYQfe6ZSeIvpjT_wFAswU-CHanWjA",
@@ -9,17 +9,17 @@ const firebaseConfig = {
   projectId: "bean-tracker-1020e",
   storageBucket: "bean-tracker-1020e.appspot.com",
   messagingSenderId: "602819306670",
-  appId: "1:602819306670:web:2599e347f43c7b5d86393f"
+  appId: "1:602819306670:web:2599e347f43c7b5d86393f",
 };
-  // init firebase
-  firebase.initializeApp(firebaseConfig)
+// init firebase
+firebase.initializeApp(firebaseConfig);
 
-  // init services
-  const projectFirestore = firebase.firestore()
-  const projectAuth = firebase.auth()
-  const storage = firebase.storage();
+// init services
+const projectFirestore = firebase.firestore();
+const projectAuth = firebase.auth();
+const storage = firebase.storage();
 
-   // timestamp
-   const timestamp = firebase.firestore.Timestamp
+// timestamp
+const timestamp = firebase.firestore.Timestamp;
 
-   export { projectFirestore, projectAuth, storage, timestamp }
+export { projectFirestore, projectAuth, storage, timestamp };

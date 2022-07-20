@@ -73,9 +73,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  TODO
  - Edit saved bean
  - Crop image to fit card
- - Search for bean
- - Overhaul UI (MaterialUI?)
  - PWA
 
 Completed:
  - Add notes section bean doc
+ - Overhaul UI (MaterialUI?)
+  - Search for bean
