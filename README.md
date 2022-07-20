@@ -29,7 +29,7 @@ To visit App:
 `localhost:3000/`
 
 ### Live
-The site is currently live at [Bean tracker](beans.oneill.pro)
+The site is currently live at [Bean tracker](http://beans.oneill.pro)
 
 
 ## Project Status
